@@ -23,6 +23,8 @@ public class guiFunctionalitySteps {
     // switch to this if you use Chrome
     //WebDriver driver = new ChromeDriver();
 
+    // ------------------------------ CUCUMBER GLUE CODE ----------------------------------
+
     @Given("^is the URL \"([^\"]*)\"\\.$")
     public void isTheURL(String arg1) throws Throwable {
         openWebsite(driver, arg1);
@@ -192,6 +194,10 @@ public class guiFunctionalitySteps {
           throw new PendingException();
       }
   */
+
+    //--------------------------------- START OF HELP-METHODS ------------------------------------------------
+
+
     public static void waitForObject(WebDriver driver, String id) {
         WebDriverWait wait = new WebDriverWait(driver, 35);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id(id))));
