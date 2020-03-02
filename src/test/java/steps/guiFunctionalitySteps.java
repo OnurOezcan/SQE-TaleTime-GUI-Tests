@@ -16,7 +16,7 @@ import java.util.List;
 import static hilfsmethoden.hilfsmethoden.*;
 
 public class guiFunctionalitySteps {
-    //private final static String URL = "http://localhost:8100";
+
     private WebDriver driver = new ChromeDriver();
 
     //switch if you have opera
