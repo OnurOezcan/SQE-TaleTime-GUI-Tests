@@ -38,8 +38,8 @@ public abstract class hilfsmethoden {
         openWebsite(driver, URL);
         clickOnObject(driver, "registrationButton");
         waitForObject(driver, "createUserButton");
-        waitForObject(driver, "createAccountMailInput");
-        waitForObject(driver, "createAccountPINInput");
-        waitForObject(driver, "createAccountNameInput");
+        waitForObject(driver, "accountEMail");
+        waitForObject(driver, "accountPIN");
+        waitForObject(driver, "accountName");
     }
 }
