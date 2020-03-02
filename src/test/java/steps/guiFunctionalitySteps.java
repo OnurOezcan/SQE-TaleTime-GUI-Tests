@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,6 +19,9 @@ public class guiFunctionalitySteps {
     final static String URL = "http://localhost:8100";
 
     WebDriver driver = new OperaDriver();
+
+    // switch to this if you use Chrome
+    //WebDriver driver = new ChromeDriver();
 
     @Given("^is the URL \"([^\"]*)\"\\.$")
     public void isTheURL(String arg1) throws Throwable {
