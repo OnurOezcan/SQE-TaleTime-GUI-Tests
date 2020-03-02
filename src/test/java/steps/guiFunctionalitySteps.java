@@ -1,9 +1,7 @@
 package steps;
 
 import cucumber.api.DataTable;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +13,6 @@ import static hilfsmethoden.hilfsmethoden.*;
 
 public class guiFunctionalitySteps {
 
-    final static String URL = "http://localhost:8100";
     //WebDriver driver = new ChromeDriver();
 
     // switch to this if you use Chrome
