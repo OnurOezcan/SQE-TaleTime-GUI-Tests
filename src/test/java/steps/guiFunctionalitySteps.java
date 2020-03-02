@@ -3,8 +3,10 @@ package steps;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 import java.util.List;
@@ -12,11 +14,11 @@ import java.util.List;
 import static hilfsmethoden.hilfsmethoden.*;
 
 public class guiFunctionalitySteps {
+    //private final static String URL = "http://localhost:8100";
+    private WebDriver driver = new ChromeDriver();
 
-    //WebDriver driver = new ChromeDriver();
-
-    // switch to this if you use Chrome
-    WebDriver driver = new OperaDriver();
+    //switch if you have opera
+    //private WebDriver driver = new OperaDriver();
 
     // ------------------------------ CUCUMBER GLUE CODE ----------------------------------
 
@@ -37,7 +39,6 @@ public class guiFunctionalitySteps {
         assert checkIfObjectExistis(driver, "startPageHeading");
         driver.quit();
     }
-
 
     @When("^the user clicks on Registration-Button$")
     public void theUserClicksOnRegistrationButton() throws Throwable {
@@ -61,9 +62,14 @@ public class guiFunctionalitySteps {
             String description = data.get(i).get(0).trim();
             String value = data.get(i).get(1).trim();
 
-            WebElement element = driver.findElement(By.cssSelector("ion-input[name=\"" + description + "\"] input"));
 
-            element.sendKeys(value);
+            //DOES NOT WORK (REASON IS CURRENTLY UNKNOWN)
+            //WebElement element = driver.findElement(By.id(description));
+            //element.click();
+            //element.sendKeys(value);
+
+            //CURRENT WORKAROUND: EXECUTE JAVASCRIPT AND SET THE VALUE THERE
+            ((JavascriptExecutor) driver).executeScript("document.getElementById('" + description + "').value = '" + value + "';");
         }
     }
 

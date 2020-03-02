@@ -15,10 +15,10 @@ Feature: This .ferature file checks the functionality of the graphical user inte
 
   Scenario: Check if an account can be created
     Given are the following values:
-      | Designation : | Value:                |
-      | name          | Tester                |
-      | email         | Tester@htwsaarTest.de |
-      | pin           | 1234                  |
+      | Designation :          | Value:                |
+      | createAccountNameInput | Tester                |
+      | createAccountMailInput | Tester@htwsaarTest.de |
+      | createAccountPINInput  | 1234                  |
     When The button Create was clicked with these values
     Then a new user should exist.
 
