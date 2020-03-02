@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runner.RunCukesTest" time="10.796" tests="55" errors="4" skipped="37" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Mesut\Downloads\TaleTimeGuiTests\target\test-classes;C:\Users\Mesut\Downloads\TaleTimeGuiTests\target\classes;C:\Users\Mesut\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\Mesut\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Mesut\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Mesut\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Mesut\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Mesut\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Mesut\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Mesut\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Mesut\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Mesut\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Mesut\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Mesut\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Mesut\AppData\Local\Temp\surefire4194202880447089876\surefirebooter3818918292968475787.jar C:\Users\Mesut\AppData\Local\Temp\surefire4194202880447089876 2020-03-02T13-57-29_038-jvmRun1 surefire4034145933399449268tmp surefire_0409190376243680216tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Mesut\Downloads\TaleTimeGuiTests\target\test-classes;C:\Users\Mesut\Downloads\TaleTimeGuiTests\target\classes;C:\Users\Mesut\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\Mesut\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Mesut\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Mesut\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Mesut\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Mesut\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Mesut\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Mesut\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Mesut\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Mesut\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Mesut\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Mesut\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Mesut\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\Mesut\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Mesut"/>
+    <property name="user.language" value="de"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="idea.version2019.2.2" value="true"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
+    <property name="basedir" value="C:\Users\Mesut\Downloads\TaleTimeGuiTests"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Mesut\AppData\Local\Temp\surefire4194202880447089876\surefirebooter3818918292968475787.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="user.name" value="Mesut"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Mesut\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Mesut\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="user.dir" value="C:\Users\Mesut\Downloads\TaleTimeGuiTests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloud Foundry;C:\Users\Mesut\AppData\Roaming\Cloud Foundry;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\nodejs\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Android;C:\Program Files\dotnet\;C:\Users\Mesut\AppData\Local\Microsoft\WindowsApps;C:\Users\Mesut\AppData\Roaming\npm;C:\Users\Mesut\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\Hostx64\x64;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="Given is the URL &quot;http://localhost:8100&quot;." classname="Scenario: This scenario is used to check the availability of the Web site." time="0.002"/>
+  <testcase name="When the URL is entered in the browser," classname="Scenario: This scenario is used to check the availability of the Web site." time="0"/>
+  <testcase name="Then the TaleTime startpage should appear." classname="Scenario: This scenario is used to check the availability of the Web site." time="0"/>
+  <testcase name="Scenario: This scenario is used to check the availability of the Web site." classname="Scenario: This scenario is used to check the availability of the Web site." time="0"/>
+  <testcase name="Given is the URL &quot;http://localhost:8100&quot;." classname="Scenario: This scenario checks if the user can navigate from the start page to the Registration-Form" time="0"/>
+  <testcase name="When the user clicks on Registration-Button" classname="Scenario: This scenario checks if the user can navigate from the start page to the Registration-Form" time="0"/>
+  <testcase name="Then the Registration-Form should open" classname="Scenario: This scenario checks if the user can navigate from the start page to the Registration-Form" time="0.014">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;createAccountNameInput&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MESUT&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;&#10;Driver info: org.openqa.selenium.opera.OperaDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55692}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}&#10;Session ID: f57402bec356e46997ba276a34b6a012&#10;*** Element info: {Using=id, value=createAccountNameInput}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"id","selector":"createAccountNameInput"}
+  (Session info: chrome=79.0.3945.130)
+  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MESUT', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55692}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: f57402bec356e46997ba276a34b6a012
+*** Element info: {Using=id, value=createAccountNameInput}
+</error>
+  </testcase>
+  <testcase name="Scenario: This scenario checks if the user can navigate from the start page to the Registration-Form" classname="Scenario: This scenario checks if the user can navigate from the start page to the Registration-Form" time="0.016">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;createAccountNameInput&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MESUT&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;&#10;Driver info: org.openqa.selenium.opera.OperaDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55692}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}&#10;Session ID: f57402bec356e46997ba276a34b6a012&#10;*** Element info: {Using=id, value=createAccountNameInput}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"id","selector":"createAccountNameInput"}
+  (Session info: chrome=79.0.3945.130)
+  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MESUT', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55692}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: f57402bec356e46997ba276a34b6a012
+*** Element info: {Using=id, value=createAccountNameInput}
+</error>
+  </testcase>
+  <testcase name="Given are the following values:" classname="Scenario: Check if an account can be created" time="0.003">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;name&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MESUT&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;&#10;Driver info: org.openqa.selenium.opera.OperaDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55746}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}&#10;Session ID: e61144ddc0225361f5a86dc155cd3af8&#10;*** Element info: {Using=name, value=name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"name","selector":"name"}
+  (Session info: chrome=79.0.3945.130)
+  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MESUT', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55746}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: e61144ddc0225361f5a86dc155cd3af8
+*** Element info: {Using=name, value=name}
+</error>
+    <system-err><![CDATA[Starting OperaDriver 79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}) on port 19664
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Mär 02, 2020 1:57:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMATION: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="Scenario: Check if an account can be created" classname="Scenario: Check if an account can be created" time="0.005">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;name&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MESUT&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;&#10;Driver info: org.openqa.selenium.opera.OperaDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55746}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}&#10;Session ID: e61144ddc0225361f5a86dc155cd3af8&#10;*** Element info: {Using=name, value=name}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"name","selector":"name"}
+  (Session info: chrome=79.0.3945.130)
+  (Driver info: OperaDriver=79.0.3945.79 (29f75ce3f42b007bd80361b0dfcfee3a13ff90b8-refs/branch-heads/3945@{#916}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MESUT', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 79.0.3945.79 (29f75ce3f42b0..., userDataDir: C:\Users\Mesut\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55746}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 79.0.3945.130, webStorageEnabled: true}
+Session ID: e61144ddc0225361f5a86dc155cd3af8
+*** Element info: {Using=name, value=name}
+</error>
+  </testcase>
+  <testcase name="When The button Create was clicked with these values" classname="Scenario: Check if an account can be created" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then a new user should exist." classname="Scenario: Check if an account can be created" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Given a logged-in user" classname="Scenario: Check if a new profile can be created within an account." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When a new profile called &quot;Test Child&quot; is created" classname="Scenario: Check if a new profile can be created within an account." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then a new profile should be available" classname="Scenario: Check if a new profile can be created within an account." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if a new profile can be created within an account." classname="Scenario: Check if a new profile can be created within an account." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if a new profile can be created within an account." classname="Scenario: Check if a new profile can be created within an account." time="0.001"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Check if User can add multiple profiles." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And a existing profile" classname="Scenario: Check if User can add multiple profiles." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When a new profile called &quot;Second Child&quot; is created" classname="Scenario: Check if User can add multiple profiles." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then a new profile should be available" classname="Scenario: Check if User can add multiple profiles." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if User can add multiple profiles." classname="Scenario: Check if User can add multiple profiles." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if User can add multiple profiles." classname="Scenario: Check if User can add multiple profiles." time="0.004"/>
+  <testcase name="Given a existing User in Database" classname="Scenario: Check if a existing User can Login." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When User types in his credentials" classname="Scenario: Check if a existing User can Login." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then he should logged in" classname="Scenario: Check if a existing User can Login." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if a existing User can Login." classname="Scenario: Check if a existing User can Login." time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if a existing User can Login." classname="Scenario: Check if a existing User can Login." time="0"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Check if User can add new Stories" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When User adds new Storie Titles" classname="Scenario: Check if User can add new Stories" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then the new Stories should be available in the &quot;story-menu&quot; section" classname="Scenario: Check if User can add new Stories" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if User can add new Stories" classname="Scenario: Check if User can add new Stories" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Check if User can add new Stories" classname="Scenario: Check if User can add new Stories" time="0"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Testing the possibility to change the font size" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When User changes Font-Size to 14px" classname="Scenario: Testing the possibility to change the font size" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Font size is 14px" classname="Scenario: Testing the possibility to change the font size" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing the possibility to change the font size" classname="Scenario: Testing the possibility to change the font size" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing the possibility to change the font size" classname="Scenario: Testing the possibility to change the font size" time="0"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Testing if user can switch the selected language" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When User changes the Language from &quot;de&quot; to &quot;en&quot;" classname="Scenario: Testing if user can switch the selected language" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then the Application should be in English" classname="Scenario: Testing if user can switch the selected language" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can switch the selected language" classname="Scenario: Testing if user can switch the selected language" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can switch the selected language" classname="Scenario: Testing if user can switch the selected language" time="0"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Testing if user can Log out" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When user types in his pin under &quot;my Account&quot;" classname="Scenario: Testing if user can Log out" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And clicks on Logout in the next page" classname="Scenario: Testing if user can Log out" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then the TaleTime startpage should appear." classname="Scenario: Testing if user can Log out" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can Log out" classname="Scenario: Testing if user can Log out" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can Log out" classname="Scenario: Testing if user can Log out" time="0.001"/>
+  <testcase name="Given a logged-in user" classname="Scenario: Testing if user can delete his account" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="When user typed in hin pin under &quot;myAccount&quot;" classname="Scenario: Testing if user can delete his account" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And clicks on delete account" classname="Scenario: Testing if user can delete his account" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then he should not able to login again" classname="Scenario: Testing if user can delete his account" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can delete his account" classname="Scenario: Testing if user can delete his account" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Testing if user can delete his account" classname="Scenario: Testing if user can delete his account" time="0.001"/>
+</testsuite>
