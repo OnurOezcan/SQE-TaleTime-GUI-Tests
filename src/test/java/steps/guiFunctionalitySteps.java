@@ -103,13 +103,12 @@ public class guiFunctionalitySteps {
         writeInInputField(driver, name, "createProfileInput");
         clickOnObject(driver, "createNewProfileButton");
     }
-/*
+
       @Then("^a new profile should be available$")
       public void aNewProfileShouldBeAvailable() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
+          assert driver.findElement(By.className("md button button-small button-clear ion-activatable ion-focusable hydrated")).isDisplayed();
       }
-
+/*
       @Given("^a existing profile$")
       public void aExistingProfile() throws Throwable {
           // Write code here that turns the phrase above into concrete actions
