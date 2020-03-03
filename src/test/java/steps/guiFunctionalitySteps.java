@@ -18,6 +18,7 @@ import static hilfsmethoden.hilfsmethoden.*;
 public class guiFunctionalitySteps {
 
     private WebDriver driver = new ChromeDriver();
+    private static String URL = "http://localhost:8100";
 
     //switch if you have opera
     //private WebDriver driver = new OperaDriver();
@@ -86,14 +87,15 @@ public class guiFunctionalitySteps {
       @Then("^a new user should exist\\.$")
       public void aNewUserShouldExist() throws Throwable {
           assert checkIfObjectExistis(driver, "createUserHeader");
+          driver.quit();
       }
 
-      /* @Given("^a logged-in user$")
+       @Given("^a logged-in user$")
       public void aLoggedInUser() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
+          gotToRegistrationPage(driver);
+          createUser(driver, "Cedric", "htw@sqe.de", "1234");
       }
-
+/*
       @When("^a new profile called \"([^\"]*)\" is created$")
       public void aNewProfileCalledIsCreated(String arg1) throws Throwable {
           // Write code here that turns the phrase above into concrete actions

@@ -1,6 +1,7 @@
 package hilfsmethoden;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,5 +42,13 @@ public abstract class hilfsmethoden {
         waitForObject(driver, "accountEMail");
         waitForObject(driver, "accountPIN");
         waitForObject(driver, "accountName");
+    }
+
+    public static void createUser(WebDriver driver, String name, String email, String pin) {
+
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('accountName').value = '" + name + "';");
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('accountEMail').value = '" + email + "';");
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('accountPIN').value = '" + pin + "';");
+        clickOnObject(driver, "createUserButton");
     }
 }
