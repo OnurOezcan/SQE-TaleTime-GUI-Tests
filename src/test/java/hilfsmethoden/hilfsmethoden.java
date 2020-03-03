@@ -53,4 +53,9 @@ public abstract class hilfsmethoden {
         ((JavascriptExecutor) driver).executeScript("document.getElementById('accountPIN').value = '" + pin + "';");
         clickOnObject(driver, "createUserButton");
     }
+
+    public static void writeInInputField(WebDriver driver, String value, String id) {
+        waitForObject(driver, id);
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('" + id + "').value = '" + value + "';");
+    }
 }

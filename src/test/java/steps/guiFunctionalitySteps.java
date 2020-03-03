@@ -97,8 +97,10 @@ public class guiFunctionalitySteps {
     }
 
     @When("^a new profile called \"([^\"]*)\" is created$")
-    public void aNewProfileCalledIsCreated(String arg1) throws Throwable {
+    public void aNewProfileCalledIsCreated(String name) throws Throwable {
         //actually don't work
+        clickOnObject(driver, "createProfileButton");
+        writeInInputField(driver, name, "createProfileInput");
         clickOnObject(driver, "createProfileButton");
     }
 /*
