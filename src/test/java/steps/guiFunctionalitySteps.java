@@ -79,16 +79,16 @@ public class guiFunctionalitySteps {
       @When("^The button Create was clicked with these values$")
       public void theButtonCreateWasClicked() throws Throwable {
           clickOnObject(driver, "createUserButton");
-          //driver.findElement(By.xpath("//body")).click();
+          assert true;
+
       }
 
-     /* @Then("^a new user should exist\\.$")
+      @Then("^a new user should exist\\.$")
       public void aNewUserShouldExist() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
+          assert checkIfObjectExistis(driver, "createUserHeader");
       }
 
-      @Given("^a logged-in user$")
+      /* @Given("^a logged-in user$")
       public void aLoggedInUser() throws Throwable {
           // Write code here that turns the phrase above into concrete actions
           throw new PendingException();
