@@ -77,12 +77,10 @@ public class guiFunctionalitySteps {
         assert true;
     }
 
-
     @When("^The button Create was clicked with these values$")
     public void theButtonCreateWasClicked() throws Throwable {
         clickOnObject(driver, "createUserButton");
         assert true;
-
     }
 
     @Then("^a new user should exist\\.$")
@@ -100,10 +98,8 @@ public class guiFunctionalitySteps {
 
     @When("^a new profile called \"([^\"]*)\" is created$")
     public void aNewProfileCalledIsCreated(String arg1) throws Throwable {
-
         //actually don't work
-        clickOnObject(driver, "createProfileButton");
-
+        driver.findElement(By.id("createProfileButton")).click();
     }
 /*
       @Then("^a new profile should be available$")
