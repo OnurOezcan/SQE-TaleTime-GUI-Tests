@@ -15,10 +15,10 @@ Feature: This .ferature file checks the functionality of the graphical user inte
 
   Scenario: Check if an account can be created
     Given are the following values:
-      | Designation:  | Value:                |
-      | accountName   | Tester                |
-      | accountEMail  | Tester@htwsaarTest.de |
-      | accountPIN    | 1234                  |
+      | Designation: | Value:                |
+      | accountName  | Tester                |
+      | accountEMail | Tester@htwsaarTest.de |
+      | accountPIN   | 1234                  |
     When The button Create was clicked with these values
     Then a new user should exist.
 
@@ -28,7 +28,7 @@ Feature: This .ferature file checks the functionality of the graphical user inte
     Then a new profile should be available
 
   Scenario: Check if User can add multiple profiles.
-  #  Given a logged-in user
+    Given a logged-in user
     And a existing profile
     When a new profile called "Second Child" is created
     Then a new profile should be available

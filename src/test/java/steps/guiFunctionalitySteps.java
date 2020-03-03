@@ -100,27 +100,28 @@ public class guiFunctionalitySteps {
     public void aNewProfileCalledIsCreated(String name) throws Throwable {
         //actually don't work
         clickOnObject(driver, "createProfileButton");
+        waitForObject(driver, "createProfileInput");
         writeInInputField(driver, name, "createProfileInput");
         clickOnObject(driver, "createNewProfileButton");
+        waitForObject(driver, "createProfileButton");
     }
 
       @Then("^a new profile should be available$")
       public void aNewProfileShouldBeAvailable() throws Throwable {
           assert driver.findElement(By.className("md button button-small button-clear ion-activatable ion-focusable hydrated")).isDisplayed();
+          driver.quit();
       }
-/*
+
       @Given("^a existing profile$")
       public void aExistingProfile() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
+          aNewProfileCalledIsCreated("Baby");
       }
-
+/*
       @Given("^a existing User in Database$")
       public void aExistingUserInDatabase() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
 
+      }
+/*
       @When("^User types in his credentials$")
       public void userTypesInHisCredentials() throws Throwable {
           // Write code here that turns the phrase above into concrete actions
