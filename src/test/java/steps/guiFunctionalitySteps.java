@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static hilfsmethoden.hilfsmethoden.*;
 
@@ -100,22 +101,20 @@ public class guiFunctionalitySteps {
     public void aNewProfileCalledIsCreated(String name) throws Throwable {
         //actually don't work
         clickOnObject(driver, "createProfileButton");
-        waitForObject(driver, "createProfileInput");
         writeInInputField(driver, name, "createProfileInput");
         clickOnObject(driver, "createNewProfileButton");
-        waitForObject(driver, "createProfileButton");
     }
 
-      @Then("^a new profile should be available$")
-      public void aNewProfileShouldBeAvailable() throws Throwable {
-          assert driver.findElement(By.className("md button button-small button-clear ion-activatable ion-focusable hydrated")).isDisplayed();
-          driver.quit();
-      }
+    @Then("^a new profile should be available$")
+    public void aNewProfileShouldBeAvailable() throws Throwable {
+        assert driver.findElement(By.className("md button button-small button-clear ion-activatable ion-focusable hydrated")).isDisplayed();
+        driver.quit();
+    }
 
-      @Given("^a existing profile$")
-      public void aExistingProfile() throws Throwable {
-          aNewProfileCalledIsCreated("Baby");
-      }
+    @Given("^a existing profile$")
+    public void aExistingProfile() throws Throwable {
+        aNewProfileCalledIsCreated("Baby");
+    }
 /*
       @Given("^a existing User in Database$")
       public void aExistingUserInDatabase() throws Throwable {
