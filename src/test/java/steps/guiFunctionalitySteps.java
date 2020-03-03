@@ -101,7 +101,7 @@ public class guiFunctionalitySteps {
         //actually don't work
         clickOnObject(driver, "createProfileButton");
         writeInInputField(driver, name, "createProfileInput");
-        clickOnObject(driver, "createProfileButton");
+        clickOnObject(driver, "createNewProfileButton");
     }
 /*
       @Then("^a new profile should be available$")
