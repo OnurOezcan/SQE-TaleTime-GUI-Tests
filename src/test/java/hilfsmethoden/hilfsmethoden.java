@@ -22,7 +22,9 @@ public abstract class hilfsmethoden {
     }
 
     public static void clickOnObject(WebDriver driver, String id) {
-        driver.findElement(By.id(id)).click();
+        waitForObject(driver, id);
+        WebElement element = driver.findElement(By.id(id));
+        element.click();
     }
 
     public static boolean checkIfObjectExistis(WebDriver driver, String id) {
