@@ -74,34 +74,38 @@ public class guiFunctionalitySteps {
             //CURRENT WORKAROUND: EXECUTE JAVASCRIPT AND SET THE VALUE THERE
             ((JavascriptExecutor) driver).executeScript("document.getElementById('" + description + "').value = '" + value + "';");
         }
+        assert true;
     }
 
 
-      @When("^The button Create was clicked with these values$")
-      public void theButtonCreateWasClicked() throws Throwable {
-          clickOnObject(driver, "createUserButton");
-          assert true;
+    @When("^The button Create was clicked with these values$")
+    public void theButtonCreateWasClicked() throws Throwable {
+        clickOnObject(driver, "createUserButton");
+        assert true;
 
-      }
+    }
 
-      @Then("^a new user should exist\\.$")
-      public void aNewUserShouldExist() throws Throwable {
-          assert checkIfObjectExistis(driver, "createUserHeader");
-          driver.quit();
-      }
+    @Then("^a new user should exist\\.$")
+    public void aNewUserShouldExist() throws Throwable {
+        assert checkIfObjectExistis(driver, "createUserHeader");
+        driver.quit();
+    }
 
-       @Given("^a logged-in user$")
-      public void aLoggedInUser() throws Throwable {
-          gotToRegistrationPage(driver);
-          createUser(driver, "Cedric", "htw@sqe.de", "1234");
-      }
-/*
+    @Given("^a logged-in user$")
+    public void aLoggedInUser() throws Throwable {
+        gotToRegistrationPage(driver);
+        createUser(driver, "aUser", "htw@sqe.de", "1234");
+        assert true;
+    }
+
       @When("^a new profile called \"([^\"]*)\" is created$")
       public void aNewProfileCalledIsCreated(String arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
 
+        //actually don't work
+        driver.findElement(By.id("createProfileButton")).click();
+
+      }
+/*
       @Then("^a new profile should be available$")
       public void aNewProfileShouldBeAvailable() throws Throwable {
           // Write code here that turns the phrase above into concrete actions
