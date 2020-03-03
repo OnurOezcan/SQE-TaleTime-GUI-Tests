@@ -99,7 +99,7 @@ public class guiFunctionalitySteps {
     @When("^a new profile called \"([^\"]*)\" is created$")
     public void aNewProfileCalledIsCreated(String arg1) throws Throwable {
         //actually don't work
-        driver.findElement(By.id("createProfileButton")).click();
+        clickOnObject(driver, "createProfileButton");
     }
 /*
       @Then("^a new profile should be available$")
