@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -115,89 +116,90 @@ public class guiFunctionalitySteps {
     public void aExistingProfile() throws Throwable {
         aNewProfileCalledIsCreated("Baby");
     }
-/*
-      @Given("^a existing User in Database$")
-      public void aExistingUserInDatabase() throws Throwable {
 
-      }
-/*
-      @When("^User types in his credentials$")
-      public void userTypesInHisCredentials() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^user types in his pin under \"([^\"]*)\"$")
+    public void userTypesInHisPinUnder(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @Then("^he should logged in$")
-      public void heShouldLoggedIn() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^clicks on Logout in the next page$")
+    public void clicksOnLogoutInTheNextPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^User adds new Storie Titles$")
-      public void userAddsNewStorieTitles() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^User Logs out$")
+    public void userLogsOut() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @Then("^the new Stories should be available in the \"([^\"]*)\" section$")
-      public void theNewStoriesShouldBeAvailableInTheSection(String arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^types types in his credentials on Login Page$")
+    public void typesTypesInHisCredentialsOnLoginPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^User changes Font-Size to (\\d+)px$")
-      public void userChangesFontSizeToPx(int arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @Then("^he should logged in$")
+    public void heShouldLoggedIn() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @Then("^Font size is (\\d+)px$")
-      public void fontSizeIsPx(int arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^User adds new Storie Titles$")
+    public void userAddsNewStorieTitles() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^User changes the Language from \"([^\"]*)\" to \"([^\"]*)\"$")
-      public void userChangesTheLanguageFromTo(String arg1, String arg2) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @Then("^the new Stories should be available in the \"([^\"]*)\" section$")
+    public void theNewStoriesShouldBeAvailableInTheSection(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @Then("^the Application should be in English$")
-      public void theApplicationShouldBeInEnglish() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^User changes Font-Size to (\\d+)px$")
+    public void userChangesFontSizeToPx(int arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^user types in his pin under \"([^\"]*)\"$")
-      public void userTypesInHisPinUnder(String arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @Then("^Font size is (\\d+)px$")
+    public void fontSizeIsPx(int arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^clicks on Logout in the next page$")
-      public void clicksOnLogoutInTheNextPage() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^User changes the Language from \"([^\"]*)\" to \"([^\"]*)\"$")
+    public void userChangesTheLanguageFromTo(String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^user typed in hin pin under \"([^\"]*)\"$")
-      public void userTypedInHinPinUnder(String arg1) throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @Then("^the Application should be in English$")
+    public void theApplicationShouldBeInEnglish() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @When("^clicks on delete account$")
-      public void clicksOnDeleteAccount() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
+    @When("^user typed in hin pin under \"([^\"]*)\"$")
+    public void userTypedInHinPinUnder(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 
-      @Then("^he should not able to login again$")
-      public void heShouldNotAbleToLoginAgain() throws Throwable {
-          // Write code here that turns the phrase above into concrete actions
-          throw new PendingException();
-      }
-  */
+    @When("^clicks on delete account$")
+    public void clicksOnDeleteAccount() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^he should not able to login again$")
+    public void heShouldNotAbleToLoginAgain() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
 
 }

@@ -33,9 +33,16 @@ Feature: This .ferature file checks the functionality of the graphical user inte
     When a new profile called "Second Child" is created
     Then a new profile should be available
 
+  Scenario: Testing if user can Log out
+    Given a logged-in user
+    When user types in his pin under "my Account"
+    And clicks on Logout in the next page
+    Then the TaleTime startpage should appear.
+
   Scenario: Check if a existing User can Login.
-   # Given a existing User in Database
-    When User types in his credentials
+  #  Given a logged-in user
+    When User Logs out
+    And  types types in his credentials on Login Page
     Then he should logged in
 
   Scenario: Check if User can add new Stories
@@ -52,12 +59,6 @@ Feature: This .ferature file checks the functionality of the graphical user inte
    # Given a logged-in user
     When User changes the Language from "de" to "en"
     Then the Application should be in English
-
-  Scenario: Testing if user can Log out
-   # Given a logged-in user
-    When user types in his pin under "my Account"
-    And clicks on Logout in the next page
-    Then the TaleTime startpage should appear.
 
   Scenario: Testing if user can delete his account
    # Given a logged-in user
