@@ -54,7 +54,6 @@ public class guiFunctionalitySteps {
 
     @Then("^the Registration-Form should open$")
     public void theRegistrationFormShouldOpen() throws Throwable {
-        //waitForObject(driver, "createAccountButton",true);
         waitForDom(driver);
         assert checkIfObjectExistis(driver, "createAccountButton");
         driver.quit();

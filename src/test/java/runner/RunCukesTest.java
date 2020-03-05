@@ -8,7 +8,7 @@ import static cucumber.api.SnippetType.CAMELCASE;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/java/features"}, snippets = CAMELCASE, glue={"steps"})
+@CucumberOptions(plugin = {"json:target/cucumber.json", "html:target/site/cucumber-pretty"}, features = {"src/test/java/features"}, snippets = CAMELCASE, glue={"steps"})
 
 public class RunCukesTest {
 }
