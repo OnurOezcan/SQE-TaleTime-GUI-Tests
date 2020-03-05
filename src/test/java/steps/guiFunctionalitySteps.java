@@ -40,22 +40,23 @@ public class guiFunctionalitySteps {
 
     @Then("^the TaleTime startpage should appear\\.$")
     public void theTaleTimeStartpageShouldAppear() throws Throwable {
-        waitForObject(driver, "startPageHeading");
+        //waitForObject(driver, "startPageHeading", true);
+        waitForDom(driver);
         assert checkIfObjectExistis(driver, "startPageHeading");
         driver.quit();
     }
 
     @When("^the user clicks on Registration-Button$")
     public void theUserClicksOnRegistrationButton() throws Throwable {
-        waitForObject(driver, "registrationButton");
-        clickOnObject(driver, "registrationButton");
+        clickOnObject(driver, "createAccountButton", true);
         assert true;
     }
 
     @Then("^the Registration-Form should open$")
     public void theRegistrationFormShouldOpen() throws Throwable {
-        waitForObject(driver, "createUserButton");
-        assert checkIfObjectExistis(driver, "createUserButton");
+        //waitForObject(driver, "createAccountButton",true);
+        waitForDom(driver);
+        assert checkIfObjectExistis(driver, "createAccountButton");
         driver.quit();
     }
 
@@ -67,21 +68,18 @@ public class guiFunctionalitySteps {
             String description = data.get(i).get(0).trim();
             String value = data.get(i).get(1).trim();
 
-
-            //DOES NOT WORK (REASON IS CURRENTLY UNKNOWN)
-            //WebElement element = driver.findElement(By.id(description));
-            //element.click();
-            //element.sendKeys(value);
-
-            //CURRENT WORKAROUND: EXECUTE JAVASCRIPT AND SET THE VALUE THERE
-            ((JavascriptExecutor) driver).executeScript("document.getElementById('" + description + "').value = '" + value + "';");
+            writeInInputField(driver, value, description, true);
+            TimeUnit.SECONDS.sleep(1);
         }
         assert true;
     }
 
     @When("^The button Create was clicked with these values$")
     public void theButtonCreateWasClicked() throws Throwable {
-        clickOnObject(driver, "createUserButton");
+        //clickOnObject(driver, "createAccountButton", true);
+//        changeId(driver, "createAccountButton", "test2");
+        clickOnObject(driver, "registerAndCreateAccount", true);
+        TimeUnit.SECONDS.sleep(10);
         assert true;
     }
 
@@ -101,9 +99,9 @@ public class guiFunctionalitySteps {
     @When("^a new profile called \"([^\"]*)\" is created$")
     public void aNewProfileCalledIsCreated(String name) throws Throwable {
         //actually don't work
-        clickOnObject(driver, "createProfileButton");
-        writeInInputField(driver, name, "createProfileInput");
-        clickOnObject(driver, "createNewProfileButton");
+        clickOnObject(driver, "createProfileButton", true);
+        writeInInputField(driver, name, "createProfileInput", true);
+        clickOnObject(driver, "createNewProfileButton", true);
     }
 
     @Then("^a new profile should be available$")

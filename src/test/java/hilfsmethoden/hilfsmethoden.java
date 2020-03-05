@@ -1,8 +1,14 @@
 package hilfsmethoden;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.awt.*;
+import java.awt.event.InputEvent;
 
 
 public abstract class hilfsmethoden {
@@ -12,19 +18,69 @@ public abstract class hilfsmethoden {
     //--------------------------------- START OF HELP-METHODS ------------------------------------------------
 
 
-    public static void waitForObject(WebDriver driver, String id) {
-        WebDriverWait wait = new WebDriverWait(driver, 35);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+//    public static void waitForObject(WebDriver driver, String id, boolean useId) {
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        if (useId) {
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+//        } else {
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(id)));
+//        }
+//    }
+
+    public static void waitForDom(WebDriver driver) {
+        new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
+                ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
     }
 
-    public static void clickOnObject(WebDriver driver, String id) {
-        waitForObject(driver, id);
-        WebElement element = driver.findElement(By.id(id));
+    public static void changeId(WebDriver driver, String oldId, String newId) {
+        waitForDom(driver);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("document.getElementById('" + oldId + "').setAttribute('id', '"+ newId +"')");
+    }
+
+    public static void clickOnObject(WebDriver driver, String id, boolean useId) {
+        //waitForObject(driver, id, useId);
+        waitForDom(driver);
+        WebElement element;
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        if (useId) {
+            //Object t = executor.executeScript("return document.getElementById('createAccountButton')", id);
+            element = (WebElement)executor.executeScript("return document.getElementById('" + id + "')");
+            //element = driver.findElement(By.id(id));
+        } else {
+            element = driver.findElement(By.xpath(id));
+        }
+
         try {
-            JavascriptExecutor executor = (JavascriptExecutor)driver;
-            executor.executeScript("arguments[0].click();", element);
-        } catch (StaleElementReferenceException e) {
-            clickOnObject(driver, id);
+//            Object x = executor.executeScript("return window.scrollX + arguments[0].getBoundingClientRect().left", element);
+//            Object y = executor.executeScript("return window.scrollY + arguments[0].getBoundingClientRect().top", element);
+            Point coordinates = element.getLocation();
+            Robot robot = new Robot();
+            robot.mouseMove(coordinates.getX(),coordinates.getY()+120);
+            robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+            robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+//            Actions actions = new Actions(driver);
+//            actions.moveToElement(element).click().perform();
+//            //executor.executeScript("arguments[0].click();", element);
+//            executor.executeScript("function eventFire(el, etype){\n" +
+//                    "  if (el.fireEvent) {\n" +
+//                    "    el.fireEvent('on' + etype);\n" +
+//                    "  } else {\n" +
+//                    "    var evObj = document.createEvent('Events');\n" +
+//                    "    evObj.initEvent(etype, true, false);\n" +
+//                    "    el.dispatchEvent(evObj);\n" +
+//                    "  }\n" +
+//                    "}" +
+//                    "function Sleep(milliseconds) {\n" +
+//                    "   return new Promise(resolve => setTimeout(resolve, milliseconds));\n" +
+//                    "}" +
+//                    "eventFire(arguments[0], 'mousedown');" +
+//                    "await Sleep(100);" +
+//                    "eventFire(arguments[0], 'mouseup');" +
+//                    "await Sleep(100);" +
+//                    "eventFire(arguments[0], 'click');", element);
+        } catch (StaleElementReferenceException | AWTException e) {
+            clickOnObject(driver, id, useId);
         }
     }
 
@@ -40,18 +96,31 @@ public abstract class hilfsmethoden {
 
     public static void gotToRegistrationPage(WebDriver driver) {
         openWebsite(driver, URL);
-        clickOnObject(driver, "registrationButton");
+        clickOnObject(driver, "createAccountButton", true);
     }
 
     public static void createUser(WebDriver driver, String name, String email, String pin) {
-        writeInInputField(driver, name, "accountName");
-        writeInInputField(driver, email, "accountEMail");
-        writeInInputField(driver, pin, "accountPIN");
-        clickOnObject(driver, "createUserButton");
+//        writeInInputField(driver, name, "accountName");
+//        writeInInputField(driver, email, "accountEMail");
+//        writeInInputField(driver, pin, "accountPIN");
+        clickOnObject(driver, "createUserButton", true);
     }
 
-    public static void writeInInputField(WebDriver driver, String value, String id) {
-        waitForObject(driver, id);
-        ((JavascriptExecutor) driver).executeScript("document.getElementById('" + id + "').value = '" + value + "';");
+    public static void writeInInputField(WebDriver driver, String value, String id, boolean useId) {
+        //waitForObject(driver, id, useId);
+        waitForDom(driver);
+        clickOnObject(driver, id, useId);
+
+        WebElement element;
+        if (useId) {
+            element = driver.findElement(By.id(id));
+        } else {
+            element = driver.findElement(By.xpath(id));
+        }
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].value = '" + value + "';", element);
+        executor.executeScript("var event = document.createEvent('Event');\n" +
+                "event.initEvent('input', true, true);\n" +
+                "arguments[0].dispatchEvent(event);", element);
     }
 }
