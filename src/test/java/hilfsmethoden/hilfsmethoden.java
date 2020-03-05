@@ -56,7 +56,8 @@ public abstract class hilfsmethoden {
 //            Object y = executor.executeScript("return window.scrollY + arguments[0].getBoundingClientRect().top", element);
             Point coordinates = element.getLocation();
             Robot robot = new Robot();
-            robot.mouseMove(coordinates.getX(),coordinates.getY()+120);
+            robot.mouseWheel(3);
+            robot.mouseMove(coordinates.getX()+100,coordinates.getY());
             robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 //            Actions actions = new Actions(driver);
