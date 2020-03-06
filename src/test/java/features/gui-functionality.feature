@@ -54,13 +54,13 @@ Feature: This .ferature file checks the functionality of the graphical user inte
     When User adds new Story Title
     Then the new Stories should be available in the "story-menu" section
 
-#  Scenario: Testing the possibility to change the font size
-#    Given a logged-in user
-#    And a existing profile
-#    And a selected profile
-#    And a added story
-#    When User changes Font-Size to 14px
-#    Then Font size is 14px
+  Scenario: Testing the possibility to change the font size
+    Given a logged-in user
+    And a existing profile
+    And a selected profile
+    And a added story
+    When User changes Font-Size to 14px
+    Then Font size is 14px
 
   Scenario: Testing if user can switch the selected language
     Given a logged-in user

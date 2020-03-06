@@ -216,7 +216,7 @@ public class guiFunctionalitySteps {
     }
 
     @Then("^Font size is (\\d+)px$")
-    public void fontSizeIsPx(int arg1) throws Throwable {
+    public void fontSizeIsPx(int arg1) {
         waitForDom(driver);
         clickOnObject(driver, "tab-button-story-menu", true);
         waitForDom(driver);
@@ -251,7 +251,7 @@ public class guiFunctionalitySteps {
     }
 
     @When("^clicks on delete account$")
-    public void clicksOnDeleteAccount() throws Throwable {
+    public void clicksOnDeleteAccount() {
         waitForDom(driver);
         waitForObject(driver, "userPageTitle", true);
         clickOnObject(driver, "//button[@class='mat-button mat-button-base mat-warn ng-star-inserted']/span[text()='Delete account']/parent::*", false);
@@ -259,9 +259,12 @@ public class guiFunctionalitySteps {
     }
 
     @Then("^he should not able to login again$")
-    public void heShouldNotAbleToLoginAgain() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void heShouldNotAbleToLoginAgain() {
+        waitForDom(driver);
+        Assert.assertEquals(URL, driver.getCurrentUrl());
+        aLoggedInUser();
+        waitForDom(driver);
+        Assert.assertEquals(URL, driver.getCurrentUrl());
     }
 
 
