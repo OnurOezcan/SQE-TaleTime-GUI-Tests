@@ -22,12 +22,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
                 <version>2.22.2</version>
             </plugin>
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.0.0</version>
+                <version>3.13.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
@@ -42,7 +45,9 @@
                             <!-- output directory for the generated report -->
                             <outputDirectory>${project.build.directory}/site/cucumber-report</outputDirectory>
                             <!-- optional, defaults to outputDirectory if not specified -->
-                            <inputDirectory>${project.build.directory}/cucumber.json</inputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                            <checkBuildResult>true</checkBuildResult>
+                            <!-- <jsonFiles> -->
                         </configuration>
                     </execution>
                 </executions>
