@@ -50,8 +50,8 @@ public abstract class hilfsmethoden {
 
     public static void clickOnObject(WebDriver driver, String id, boolean useId) {
         waitForDom(driver);
-        waitForObject(driver, id, useId);
         scrollToElement(driver, id, useId);
+        waitForObject(driver, id, useId);
         WebElement element;
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         if (useId) {

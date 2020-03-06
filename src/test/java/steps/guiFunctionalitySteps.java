@@ -98,6 +98,7 @@ public class guiFunctionalitySteps {
     @When("^a new profile called \"([^\"]*)\" is created$")
     public void aNewProfileCalledIsCreated(String name) throws Throwable {
         //actually don't work
+        waitForObject(driver, "createProfileButton", true);
         clickOnObject(driver, "createProfileButton", true);
         writeInInputField(driver, name, "createProfileInput", true);
         clickOnObject(driver, "createNewProfileButton", true);
@@ -128,6 +129,9 @@ public class guiFunctionalitySteps {
 
     @When("^user types in his pin under \"([^\"]*)\"$")
     public void userTypesInHisPinUnder(String arg1) throws Throwable {
+        clickOnObject(driver, "tab-button-settings", true);
+        clickOnObject(driver, "goToUserAccount", true);
+        clickOnObject(driver, "logAccountOut", true);
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
@@ -150,10 +154,27 @@ public class guiFunctionalitySteps {
         throw new PendingException();
     }
 
+    @Given("^a user has an registered account$")
+    public void hasARegisteredAccount() throws Throwable {
+        assert true;
+    }
+
+    @Given("^is on the start page$")
+    public void isOnStartPage() throws Throwable {
+        driver.navigate().to(URL);
+        assert true;
+    }
+
+    @When("^User logs in$")
+    public void userLogsIn() throws Throwable {
+        aLoggedInUser();
+    }
+
     @Then("^he should logged in$")
     public void heShouldLoggedIn() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        checkIfObjectExistis(driver, "createUserHeader");
+        assert driver.getCurrentUrl().equals("http://localhost:8100/select-user-profile");
+        driver.quit();
     }
 
     @When("^User adds new Storie Titles$")
