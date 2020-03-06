@@ -5,6 +5,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -75,23 +77,21 @@ public class guiFunctionalitySteps {
 
     @When("^The button Create was clicked with these values$")
     public void theButtonCreateWasClicked() throws Throwable {
-        //clickOnObject(driver, "createAccountButton", true);
-//        changeId(driver, "createAccountButton", "test2");
         clickOnObject(driver, "registerAndCreateAccount", true);
-        TimeUnit.SECONDS.sleep(10);
         assert true;
     }
 
     @Then("^a new user should exist\\.$")
     public void aNewUserShouldExist() throws Throwable {
-        assert checkIfObjectExistis(driver, "createUserHeader");
+        checkIfObjectExistis(driver, "createUserHeader");
+        assert driver.getCurrentUrl().equals("http://localhost:8100/select-user-profile");
         driver.quit();
     }
 
     @Given("^a logged-in user$")
     public void aLoggedInUser() throws Throwable {
-        gotToRegistrationPage(driver);
-        createUser(driver, "aUser", "htw@sqe.de", "1234");
+//        gotToRegistrationPage(driver);
+        loginUser(driver, "Tester@htwsaarTest.de", "123456789");
         assert true;
     }
 
@@ -103,15 +103,27 @@ public class guiFunctionalitySteps {
         clickOnObject(driver, "createNewProfileButton", true);
     }
 
-    @Then("^a new profile should be available$")
-    public void aNewProfileShouldBeAvailable() throws Throwable {
-        assert driver.findElement(By.className("md button button-small button-clear ion-activatable ion-focusable hydrated")).isDisplayed();
+//    @Then("^a new profile should be available$")
+    @Then("^\"([^\"]*)\" profile/s should be available$")
+    public void aNewProfileShouldBeAvailable(int numberOfProfiles) throws Throwable {
+        waitForDom(driver);
+        waitForObject(driver, "selectUserTitle", true);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        ArrayList<Object> element =  (ArrayList<Object>)executor.executeScript("return document.getElementsByClassName('ng-star-inserted item md in-list ion-focusable hydrated')");
+
+        Assert.assertNotNull(element);
+        Assert.assertEquals(element.size(), numberOfProfiles);
         driver.quit();
     }
 
     @Given("^a existing profile$")
     public void aExistingProfile() throws Throwable {
         aNewProfileCalledIsCreated("Baby");
+    }
+
+    @Given("^a selected profile$")
+    public void aSelectedProfile() {
+        clickOnObject(driver, "//*[@class='ng-star-inserted item md in-list ion-focusable hydrated']", false);
     }
 
     @When("^user types in his pin under \"([^\"]*)\"$")
